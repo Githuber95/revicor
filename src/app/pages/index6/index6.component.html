@@ -4,8 +4,10 @@
   <div class="container">
     <!-- LOGO -->
     <a class="logo text-uppercase" href="/">
-      <img src="assets/images/logo-light.png" class="logo-light" alt="" height="20">
-      <img src="assets/images/logo-dark.png" alt="" class="logo-dark" height="20" />
+     <div style="font-weight: bold; color: white; font-size: larger;" class="logo-light">REVICOR</div> 
+     <div style="font-weight: bold; color: black; font-size: larger;" class="logo-dark">REVICOR</div> 
+      <!-- <img src="assets/images/logo-light.png" class="logo-light" alt="" height="20">
+      <img src="assets/images/logo-dark.png" alt="" class="logo-dark" height="20" /> -->
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -14,23 +16,32 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">
+        
         <li class="nav-item" [ngClass]="{'active':currentSection === 'home'}">
           <a [ngxScrollTo]="'#home'" href="javascript: void(0);" class="nav-link">Inicio</a>
         </li>
         <li class="nav-item" [ngClass]="{'active':currentSection === 'services'}">
           <a [ngxScrollTo]="'#services'" href="javascript: void(0);" class="nav-link">Servicios</a>
         </li>
-        <li class="nav-item" [ngClass]="{'active':currentSection === 'features'}">
-          <a [ngxScrollTo]="'#features'" href="javascript: void(0);" class="nav-link">Features</a>
+       
+        <li class="nav-item" [ngClass]="{'active':currentSection === 'ventajas'}">
+          <a [ngxScrollTo]="'#ventajas'" href="javascript: void(0);" class="nav-link">Ventajas</a>
         </li>
-        <li class="nav-item" [ngClass]="{'active':currentSection === 'clients'}">
+<!--         <li class="nav-item" [ngClass]="{'active':currentSection === 'clients'}">
           <a [ngxScrollTo]="'#clients'" href="javascript: void(0);" class="nav-link">Esconder =D</a>
-        </li>
-        <li class="nav-item" [ngClass]="{'active':currentSection === 'pricing'}">
-          <a [ngxScrollTo]="'#pricing'" href="javascript: void(0);" class="nav-link">Proyectos</a>
-        </li>
+        </li> -->
+        
+        <li class="nav-item" [ngClass]="{'active':currentSection === 'contacto'}">
+          <a [ngxScrollTo]="'#contacto'" href="javascript: void(0);" class="nav-link">Contacto</a>
+        </li> 
+
+        <li class="nav-item">
+          <a href="https://wa.me/51989337020?text=Mucho%20gusto,%20quisiera%20conocer%20acerca%20de%20los%20servicios%20de%20Revicor" 
+          target="_blank" class="nav-link" rel="nofollow">Whatsapp</a>
+        </li> 
+
       </ul>
-      <button class="btn btn-success btn-rounded navbar-btn">Whatsapp</button>
+     
 
     </div>
   </div>
@@ -43,7 +54,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="hero-wrapper text-center mb-4">
-            <p class="font-16 text-white-50 text-uppercase">Discover Invoza Today</p>
+            <p class="font-16 text-white-50 text-uppercase">Nosotros</p>
             <h1 class="hero-title text-white mb-4">Revestimientos para losas de concreto <span
                 class="text-success"> REVICOR</span></h1>
 
@@ -79,7 +90,12 @@
   <!-- Hero section End -->
   <app-services></app-services>
   <app-features></app-features>
-  <app-clients></app-clients>
-  <app-plans></app-plans>
+  
+  <!-- TESTIMONIOS -->
+ <!--  <app-clients></app-clients> -->
+  
+ <!-- PROYECTOS -->
+  <app-plans></app-plans> 
+
   <app-footer></app-footer>
 </div>
