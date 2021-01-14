@@ -15,12 +15,19 @@ import { pricingData } from './data';
 export class PlansComponent implements OnInit {
 
   pricingData: Pricing[];
+  redirectionUrl: string;
+  mail: string;
   constructor() { }
 
 
   ngOnInit(): void {
     // fetches the data
     this._fetchData();
+  }
+
+  ngAfterViewInit(){
+    this.redirectionUrl = 'mailto:administracion@revicor.pe?Subject=Solicitud%20de%20servicio';
+    this.mail = 'administracion@revicor.pe'
   }
 
   /**

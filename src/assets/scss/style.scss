@@ -17,9 +17,9 @@ File: Main scss file
 ********************************/
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "~bootstrap/scss/bootstrap";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
 @import "variables";
 
@@ -101,7 +101,7 @@ p {
 }
 
 .btn {
-  font-size: .9rem;
+  font-size: 0.9rem;
   padding: 0.7rem 1.4rem;
   font-weight: $font-weight-medium;
   transition: all 0.4s;
@@ -115,16 +115,15 @@ p {
 }
 
 .btn-sm {
-  padding: .25rem .5rem;
-  font-size: .875rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
 }
 
 .btn-rounded {
   border-radius: 30px;
 }
 
-@each $name,
-$value in $colors {
+@each $name, $value in $colors {
   .bg-#{$name} {
     background-color: #{$value} !important;
   }
@@ -158,12 +157,11 @@ $value in $colors {
     &.focus,
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled):active:focus,
-    .open>.dropdown-toggle.btn-primary {
+    .open > .dropdown-toggle.btn-primary {
       box-shadow: 0px 16px 31px -16px #{$value};
 
       background: darken($value, 4%);
       border-color: darken($value, 4%);
-
     }
   }
 
@@ -178,15 +176,13 @@ $value in $colors {
     &.focus,
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled):active:focus,
-    .open>.dropdown-toggle.btn-primary {
+    .open > .dropdown-toggle.btn-primary {
       box-shadow: 0px 16px 31px -16px #{$value};
       background: darken($value, 4%);
       border-color: darken($value, 4%);
-
     }
   }
 }
-
 
 .font-14 {
   font-size: 14px;
@@ -274,7 +270,7 @@ $value in $colors {
 
         &:hover,
         &:active {
-          color: $primary
+          color: $primary;
         }
       }
 
@@ -285,7 +281,6 @@ $value in $colors {
       }
     }
   }
-
 
   .navbar-btn {
     margin-left: 10px;
@@ -320,7 +315,7 @@ $value in $colors {
 
         &:hover,
         &:active {
-          color: $white
+          color: $white;
         }
       }
 
@@ -341,6 +336,22 @@ $value in $colors {
       display: none;
     }
   }
+  
+  @media screen and (max-width: 600px) {
+    .logo {
+      .logo-dark {
+        display: inline-block;
+      }
+
+      .logo-light {
+        display: none;
+      }
+    }
+  }
+
+  
+
+  
 
   .nav-sticky {
     .logo {
@@ -355,9 +366,6 @@ $value in $colors {
   }
 }
 
-
-
-
 /*--- navbar sticky ---*/
 
 .nav-sticky {
@@ -365,7 +373,7 @@ $value in $colors {
     margin-top: 0px;
     padding: 10px 0px;
     background-color: $white;
-    box-shadow: 0 10px 33px -14px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 33px -14px rgba(0, 0, 0, 0.1);
 
     .logo {
       .logo-light {
@@ -384,7 +392,7 @@ $value in $colors {
 
           &:hover,
           &:active {
-            color: $primary
+            color: $primary;
           }
         }
 
@@ -423,7 +431,6 @@ $value in $colors {
   }
 }
 
-
 /*--- Hero 2 ---*/
 
 .hero-section-2 {
@@ -440,13 +447,11 @@ $value in $colors {
   }
 }
 
-
 /*--- Hero 5 ---*/
 
 .hero-section-5 {
   padding: 300px 0px 220px 0px;
 }
-
 
 .play-icon-circle {
   height: 50px;
@@ -464,14 +469,11 @@ $value in $colors {
   font-size: 17px;
 }
 
-
-
 /******************
     5.Testimonial
 *******************/
 
 .testi-carousel {
-
   .owl-nav {
     position: absolute;
     top: -67px;
@@ -491,7 +493,7 @@ $value in $colors {
     }
   }
 
-  .owl-theme .owl-nav [class*=owl-]:hover {
+  .owl-theme .owl-nav [class*="owl-"]:hover {
     background: $primary;
     color: $white;
   }
@@ -538,7 +540,6 @@ $value in $colors {
   }
 }
 
-
 /******************
     6.Pricing
 *******************/
@@ -556,7 +557,7 @@ $value in $colors {
     .nav-link {
       border-radius: 7px;
       color: $body-color;
-      padding: .6rem 1.4rem;
+      padding: 0.6rem 1.4rem;
 
       &.active {
         background-color: $primary;
@@ -620,7 +621,6 @@ $value in $colors {
   }
 }
 
-
 /******************
     9.Responsive
 *******************/
@@ -630,9 +630,9 @@ $value in $colors {
     margin-top: 0px;
     padding: 10px 0px !important;
     background-color: $light !important;
-    box-shadow: 0 10px 33px -14px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 33px -14px rgba(0, 0, 0, 0.1);
 
-    &.navbar-expand-lg>.container {
+    &.navbar-expand-lg > .container {
       width: 90%;
     }
 
@@ -683,7 +683,6 @@ $value in $colors {
 }
 
 @media (max-width: 575.98px) {
-
   .testi-carousel {
     .owl-nav {
       display: none;
